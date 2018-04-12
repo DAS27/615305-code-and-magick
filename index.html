@@ -187,27 +187,24 @@
   var wizardSpeed = 3;
 // Ширина Мага
   var wizardWidth = 70;
-// Ширина игрового поля
-  var width = 700;
-// Высота игрового поля
-  var height = 300;
-// Функция которая будет управлять скоростью фаербола в зависимости от направления ветра 
+
+// Функция которая будет управлять скоростью фаербола в зависимости от направления ветра
   var getFireballSpeed = function (left) {
     if (left) {
       return 5;
     } else {
       return 2;
-    }    
+    }
   }
 // Функция которая возвращает пропорциональную высоту мага
   var getWizardHeight = function () {
     return 1.337 * wizardWidth;
   }
-// Положение Мага по горизонтали 
-  var getWizardX = function () {
-    return width / 2;
+// Положение Мага по горизонтали
+  var getWizardX = function (width) {
+    return (width-wizardWidth) / 2;
   }
-// Положение Мага по вертикали 
+// Положение Мага по вертикали
   var getWizardY = function () {
     return height * 2 / 3;
   }
